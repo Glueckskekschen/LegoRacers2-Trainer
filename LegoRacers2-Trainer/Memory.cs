@@ -31,12 +31,11 @@ namespace LegoRacers2_Trainer
 
         public Memory(String ProcessesName)
         {
-            this.ProcessesName = ProcessesName;
-            AccessProcess();
+            this.ProcessesName = ProcessesName;           
 
         }
 
-        private void AccessProcess()
+        public void AccessProcessInWhile()
         {
             do
             {
@@ -52,10 +51,38 @@ namespace LegoRacers2_Trainer
                 }
             } while (MyProcess == null);
         }
+         
+        public bool AccessProcessOnce()
+        {
+            try
+            {
+                MyProcess = Process.GetProcessesByName(ProcessesName).First();
+                processHandle = OpenProcess(PROCESS_ALL_ACCESS, false, MyProcess.Id);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
         public IntPtr GetProcessBase()
         {
             return MyProcess.MainModule.BaseAddress;
+        }
+
+        public bool ProcessStillRunning()
+        {
+            try
+            {
+                MyProcess = Process.GetProcessesByName(ProcessesName).First();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+            
         }
 
         public int ReadInt(int offset)
