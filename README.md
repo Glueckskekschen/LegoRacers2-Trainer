@@ -12,4 +12,8 @@ You can change the following Values:
 - Play with the Oils lick feature from Sam Sanister
 - Play in Chasing mode
 
+Press "Select" to activate your settings.
+
+![Alt text](sc_LR2-2.png?raw=true "Title")
+
 Thanks to Kajeuter for the Cheat Table
