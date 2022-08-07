@@ -1,1 +1,1 @@
-# LegoRacers2-Trainer
+# Lego Racers 2 - Trainer
