@@ -11,6 +11,7 @@ You can change the following Values:
 - Play as or against The Berg
 - Play with the Oils lick feature from Sam Sanister
 - Play in Chasing mode
+- Choose the starting position of each car (1-8)
 
 Press "Select" to activate your settings.
 
